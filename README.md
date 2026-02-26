@@ -1,0 +1,20 @@
+# GRAFICAION-UNIDAD-1
+# PROYECTO 
+Este pequeño proyecto de grafiacion se trata de una curva o un pasillo ascendente animado utilizando programación en Python dentro de Blender. En lugar de modelar manualmente cada objeto, el escenario se genera de forma procedural, es decir, mediante código. El programa construye automáticamente un tramo recto en forma de rampa, seguido de una curva ascendente, agrega materiales, iluminación y finalmente una cámara que recorre todo el trayecto mediante animación.
+
+Primero, el código importa las librerías necesarias. La más importante es `bpy`, que es la API oficial de Blender y permite controlar objetos, materiales, luces y animaciones mediante programación. También se importa la librería `math`, que se utiliza para realizar cálculos matemáticos como seno, coseno y el valor de π, los cuales son fundamentales para generar la parte curva del pasillo. Aunque se importa la librería `random`, en este proyecto específico no se utiliza.
+
+Después, el programa limpia completamente la escena eliminando todos los objetos existentes. Esto se hace para asegurar que el proyecto comience desde cero y evitar interferencias con elementos previamente creados. Posteriormente, se crean dos materiales mediante una función llamada `crear_material`. Esta función permite definir el color base y la rugosidad del material utilizando el nodo Principled BSDF. De esta manera, se generan dos tipos de paredes con colores distintos que se alternan para crear un efecto visual más atractivo.
+
+Luego se definen los parámetros principales del escenario, como el largo del pasillo, el ancho, el radio de la curva y el nivel de inclinación. La variable más importante es la inclinación, ya que determina cuánto aumenta la altura en cada segmento. Gracias a esta variable, el pasillo no es plano, sino que va subiendo progresivamente, formando una rampa.
+
+Para construir el tramo recto ascendente, se utiliza un ciclo `for`. En cada repetición del ciclo se crean dos cubos que representan las paredes izquierda y derecha. La altura de cada segmento se calcula multiplicando el número de iteración por el valor de la inclinación, lo que provoca que cada parte esté ligeramente más alta que la anterior. Además, se alternan los materiales usando una condición que verifica si el número es par o impar, lo cual genera un patrón decorativo en las paredes.
+
+En la segunda parte del escenario se construye el tramo curvo ascendente. Aquí se aplican fórmulas trigonométricas para posicionar los objetos en forma de arco. Se utilizan las funciones seno y coseno para calcular las coordenadas en un cuarto de circunferencia, logrando que el pasillo gire 90 grados. Al mismo tiempo, la altura continúa aumentando para mantener la sensación de ascenso. También se ajusta la rotación de los objetos para que sigan correctamente la dirección de la curva.
+
+Posteriormente, se agrega un plano grande que funciona como suelo, evitando que el escenario quede flotando en el espacio vacío. Después se incorporan luces, incluyendo una luz tipo sol y luces puntuales, con el fin de mejorar la visibilidad y dar mayor realismo al entorno.
+
+Finalmente, se crea una cámara y se anima su recorrido. Se definen los cuadros de inicio y fin de la animación, y se insertan keyframes para establecer la posición y rotación de la cámara en distintos momentos. Primero, la cámara avanza por el tramo recto ascendente y luego continúa por la curva mientras gira progresivamente. Esto permite obtener un movimiento fluido que simula un recorrido cinematográfico por el pasillo.
+
+En conclusión,podemos ver cómo es posible crear y animar un escenario tridimensional completo mediante programación. Se aplican conceptos de modelado procedural, estructuras de control como ciclos y condicionales, fundamentos de trigonometría y técnicas básicas de animación. Todo el proceso muestra cómo la programación puede utilizarse como una herramienta poderosa para automatizar la creación de entornos en Blender y generar resultados dinámicos y estructurados.
+
