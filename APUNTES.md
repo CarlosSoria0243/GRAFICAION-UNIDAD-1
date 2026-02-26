@@ -224,6 +224,7 @@ El procesamiento de mapas de bits es muy utilizado en áreas como la edición fo
 <img width="296" height="171" alt="image" src="https://github.com/user-attachments/assets/2ef16d6d-9c92-410f-9c70-49382ab80409" />
 
 
+
 # BIBLIOGRAFIAS
 Hughes, J. F., van Dam, A., McGuire, M., Sklar, D. F., Foley, J. D., & Feiner, S. K. (2014). 
 
